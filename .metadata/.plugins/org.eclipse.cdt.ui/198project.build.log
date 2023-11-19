@@ -1,0 +1,21 @@
+18:42:22 **** Incremental Build of configuration Debug for project 198project ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:7: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+  117 |       itoa(x, snum, 10);
+      |       ^~~~
+arm-none-eabi-g++ -o "198project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\roozb\STM32CubeIDE\workspace_1.13.1\198project\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="198project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: 198project.elf
+ 
+arm-none-eabi-size   198project.elf 
+arm-none-eabi-objdump -h -S  198project.elf  > "198project.list"
+   text	   data	    bss	    dec	    hex	filename
+  11724	     36	   1732	  13492	   34b4	198project.elf
+Finished building: default.size.stdout
+ 
+Finished building: 198project.list
+ 
+
+18:42:23 Build Finished. 0 errors, 1 warnings. (took 652ms)
+
