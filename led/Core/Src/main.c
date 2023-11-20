@@ -93,7 +93,7 @@ int main(void)
       for ( int x = 1; x <= 200 ; x++ )
       {
         if(x >= 60){
-        	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
+        	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
         }
       }
   /* USER CODE END 2 */
